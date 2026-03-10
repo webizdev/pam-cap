@@ -1,0 +1,168 @@
+/* css/styles.css - Premium Styles for PAM Capital */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --color-primary: #0A192F; /* Midnight Navy / Deep Sapphire Blue */
+  --color-accent: #C5A059; /* Elegant Gold / Brushed Bronze */
+  --color-light: #F8F9FA; /* Off-White */
+  --color-dark: #0B0F19; /* Deeper Dark for footer/hero */
+  --color-text: #334155; /* Slate Gray for body text */
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-light);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-primary);
+}
+
+/* Typography Utility Classes */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Navbar Transition */
+#navbar {
+  transition: all 0.4s ease;
+}
+#navbar.scrolled {
+  background-color: rgba(10, 25, 47, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Mobile Menu Overlay */
+#mobile-menu {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
+#mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Hero Section Overlay */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(10,25,47,0.75) 0%, rgba(11,15,25,0.55) 100%);
+}
+
+/* Card Hover Effects */
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(10, 25, 47, 0.08);
+}
+.service-card .service-icon {
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  color: var(--color-accent);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-accent);
+}
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+}
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Scroll Reveal Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Staggered form reveals */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Image styling */
+.img-luxury {
+  filter: grayscale(20%) contrast(110%);
+  transition: filter 0.5s ease;
+}
+.img-luxury:hover {
+  filter: grayscale(0%) contrast(100%);
+}

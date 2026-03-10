@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAM Capital | PT Pamilih Capital Advisory</title>
+    <meta name="description" content="Independent financial advisory firm based in Jakarta, specializing in private capital transactions in Indonesia.">
+    
+    <!-- Tailwind CSS (CDN for Static Execution) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A192F',
+                        gold: '#C5A059',
+                        dark: '#0B0F19',
+                        light: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-light text-slate-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 transition-all duration-300 bg-navy/90 backdrop-blur-md py-4 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-white font-serif text-2xl font-bold tracking-wider">
+                        PAM<span class="text-gold"> CAP</span>ITAL
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-300 hover:text-gold transition-colors duration-300 text-sm font-medium uppercase tracking-wider">About Us</a>
+                    <a href="#services" class="text-gray-300 hover:text-gold transition-colors duration-300 text-sm font-medium uppercase tracking-wider">Advisory Services</a>
+                    <a href="#contact" class="btn-primary px-6 py-2 rounded-sm text-sm font-medium uppercase tracking-wider">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-navy/95 backdrop-blur-lg pt-24 px-6 flex flex-col space-y-6 md:hidden">
+        <a href="#about" class="text-white text-xl font-serif text-center hover:text-gold transition-colors">About Us</a>
+        <a href="#services" class="text-white text-xl font-serif text-center hover:text-gold transition-colors">Advisory Services</a>
+        <a href="#contact" class="text-gold text-xl font-serif text-center border border-gold py-2 rounded-sm mt-4">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 bg-dark">
+            <img src="assets/hero_bg.png" alt="Jakarta Architecture Background" class="absolute inset-0 w-full h-full object-cover opacity-60 img-luxury">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <p class="text-gold uppercase tracking-[0.3em] text-sm md:text-base mb-6 font-medium reveal" style="transition-delay: 0.1s;">PT Pamilih Capital Advisory</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-serif font-bold leading-tight mb-8 reveal" style="transition-delay: 0.3s;">
+                Independent Advice.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">Strategic Capital.</span><br>
+                Indonesia.
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10 reveal" style="transition-delay: 0.5s;">
+                In a market where high-quality opportunities often require careful structuring, governance alignment, and trusted local insight.
+            </p>
+            <div class="reveal" style="transition-delay: 0.7s;">
+                <a href="#about" class="btn-primary px-8 py-4 text-sm uppercase tracking-widest font-medium rounded-sm inline-flex items-center group">
+                    Discover Our Firm
+                    <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform duration-300"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h4 class="text-gold uppercase tracking-widest text-sm font-bold mb-3">About Us</h4>
+                    <h2 class="text-4xl font-serif text-navy font-bold mb-6 leading-tight">Bridging International Capital and Indonesian Enterprise</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        PT Pamilih Capital Advisory (PCA) is an independent financial advisory firm based in Jakarta, specializing in private capital transactions in Indonesia.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        We advise international investors, financial institutions, and growth companies on <strong class="text-navy font-semibold">private equity investments, structured financing, and strategic capital solutions</strong>. Our work focuses on sectors central to Indonesia's long-term economic transformation, including energy transition, digital infrastructure, financial services, and sustainable infrastructure.
+                    </p>
+                    
+                    <div class="border-l-4 border-gold pl-6 py-2 mt-8">
+                        <h3 class="text-2xl font-serif text-navy font-bold mb-2">Leadership</h3>
+                        <h4 class="text-lg font-bold text-slate-800">M. Afdal (Dana) Pamilih, CFA</h4>
+                        <p class="text-slate-600 mt-3 italic text-sm">
+                            More than 30 years of experience in banking, securities, private equity, and financial advisory. He has advised transactions across renewable energy, infrastructure, fintech, and capital markets, working with international investors, financial institutions, and Indonesian corporations.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative reveal reveal-delay-2 h-full min-h-[500px] rounded-sm overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Corporate Boardroom" class="absolute inset-0 w-full h-full object-cover img-luxury">
+                    <div class="absolute inset-0 bg-navy/20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="text-gold uppercase tracking-widest text-sm font-bold mb-3">Advisory Services</h4>
+                <h2 class="text-4xl font-serif text-navy font-bold mb-6">Strategic Focus Areas</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    PCA advises on strategic private capital transactions involving Indonesian companies and international investors. We focus on long-term capital, governance alignment, and disciplined execution.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 border border-slate-100 service-card rounded-sm shadow-sm reveal reveal-delay-1">
+                    <div class="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-full mb-6">
+                        <i class="fas fa-handshake text-2xl text-navy service-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy font-bold mb-4">Private Capital Advisory</h3>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Buy-side and sell-side advisory</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Capital raising for growth companies</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Strategic partnerships & joint ventures</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Minority and control investments</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Exit strategy planning & structuring</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 border border-slate-100 service-card rounded-sm shadow-sm reveal reveal-delay-2">
+                    <div class="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-full mb-6">
+                        <i class="fas fa-building-columns text-2xl text-navy service-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy font-bold mb-4">Debt & Structured Finance</h3>
+                    <p class="text-slate-500 text-xs mb-4 italic">Structuring solutions for corporate expansion and infrastructure development.</p>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Project and infrastructure finance</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Senior and mezzanine financing</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Blended finance structures</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Debt restructuring and refinancing</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Capital structure optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 border border-slate-100 service-card rounded-sm shadow-sm reveal reveal-delay-3">
+                    <div class="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-full mb-6">
+                        <i class="fas fa-leaf text-2xl text-navy service-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy font-bold mb-4">Sustainable & Energy Transition</h3>
+                    <p class="text-slate-500 text-xs mb-4 italic">Capitalizing on Indonesia's transition toward a lower-carbon economy.</p>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Renewable energy platforms</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Energy transition infrastructure</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Green bond structuring</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Climate & impact investment initiatives</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 border border-slate-100 service-card rounded-sm shadow-sm reveal reveal-delay-4">
+                    <div class="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-full mb-6">
+                        <i class="fas fa-network-wired text-2xl text-navy service-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy font-bold mb-4">Digital & Financial Infrastructure</h3>
+                    <p class="text-slate-500 text-xs mb-4 italic">Navigating Southeast Asia's fastest-growing digital economy.</p>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Fintech & digital banking platforms</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>P2P & embedded finance ecosystems</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Data centres & digital infrastructure</li>
+                        <li><i class="fas fa-check text-gold mr-2 text-xs"></i>Technology-enabled financial services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner With Us Section -->
+    <section class="py-20 bg-navy text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h4 class="text-gold uppercase tracking-widest text-sm font-bold mb-3">Partner With Us</h4>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-8">Whether you are:</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-left max-w-2xl mx-auto mb-10 text-lg md:text-xl font-light text-slate-300">
+                <div class="flex items-start">
+                    <span class="text-gold mr-3 mt-1 text-base"><i class="fas fa-caret-right"></i></span>
+                    <p>A global private equity fund</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-gold mr-3 mt-1 text-base"><i class="fas fa-caret-right"></i></span>
+                    <p>A debt or infrastructure investor</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-gold mr-3 mt-1 text-base"><i class="fas fa-caret-right"></i></span>
+                    <p>A sovereign-linked institution</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-gold mr-3 mt-1 text-base"><i class="fas fa-caret-right"></i></span>
+                    <p>A family office</p>
+                </div>
+                <div class="flex items-start md:col-span-2 md:justify-center">
+                    <span class="text-gold mr-3 mt-1 text-base"><i class="fas fa-caret-right"></i></span>
+                    <p>A strategic investor entering Southeast Asia</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-serif text-white italic">We welcome discussion.</h3>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h4 class="text-gold uppercase tracking-widest text-sm font-bold mb-3">Enquiries</h4>
+                    <h2 class="text-4xl font-serif text-navy font-bold mb-8">Discuss Strategic Opportunities</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-building text-gold text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-navy font-serif">PT Pamilih Capital Advisory</h4>
+                                <p class="text-slate-600 mt-1">Jalan Sinabung Raya No. 19<br>Kebayoran Baru<br>Jakarta Selatan 12120<br>Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-gold text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-navy font-serif">Email</h4>
+                                <a href="mailto:dana.pamilih@pamcap.com" class="text-slate-600 hover:text-gold transition-colors mt-1 block">dana.pamilih@pamcap.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-phone text-gold text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-navy font-serif">Phone</h4>
+                                <a href="tel:+6281511555562" class="text-slate-600 hover:text-gold transition-colors mt-1 block">+62 815 1155 5562</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client-Side Form to WhatsApp -->
+                <div class="bg-light p-8 md:p-10 rounded-sm shadow-xl reveal reveal-delay-2 border-t-4 border-gold">
+                    <h3 class="text-2xl font-serif text-navy font-bold mb-6">VIP Contact Request</h3>
+                    <p class="text-sm text-slate-500 mb-8">Submit your details below to directly connect with our customer service team via WhatsApp.</p>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-navy mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-navy mb-2">Company / Organization</label>
+                            <input type="text" id="company" name="company" required class="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white" placeholder="Company Name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-navy mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white" placeholder="john@company.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-navy mb-2">Enquiry Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white resize-none" placeholder="How can we assist you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-primary py-4 text-sm uppercase tracking-widest font-bold rounded-sm flex justify-center items-center">
+                            Connect via WhatsApp <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 justify-between items-center border-b border-slate-800 pb-8 mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-white font-serif text-2xl font-bold tracking-wider block">
+                        PAM<span class="text-gold"> CAP</span>ITAL
+                    </a>
+                    <p class="text-slate-400 text-sm mt-2 max-w-sm">
+                        Independent Advice. Strategic Capital. Indonesia.
+                    </p>
+                </div>
+                
+                <div class="flex md:justify-end space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-gold transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:dana.pamilih@pamcap.com" class="text-slate-400 hover:text-gold transition-colors text-xl"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2026 PT Pamilih Capital Advisory. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Connection -->
+    <script src="js/script.js"></script>
+</body>
+</html>
