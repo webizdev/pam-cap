@@ -79,10 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            // Destination WhatsApp Number (example number from PRD)
+            // Destination WhatsApp Number & Email
             const waNumber = "6281511555562";
+            const emailAddress = "dana.pamilih@pamcap.com";
 
-            // Format the WhatsApp message
+            // Format the WhatsApp message (URL encoded)
             const waMessage = `Hello PAM Capital Team,%0A%0A` + 
                               `I would like to make an enquiry.%0A%0A` + 
                               `*Name:* ${name}%0A` + 
@@ -91,9 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
                               `*Message:*%0A${message}%0A%0A` + 
                               `Thank you.`;
 
-            // redirect to WhatsApp
-            const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
-            window.open(waUrl, '_blank'); // Open in new tab
+            // Format the Email message (URL encoded)
+            const emailSubject = encodeURIComponent(`Website Enquiry from ${name} at ${company}`);
+            const emailBody = encodeURIComponent(`Hello PAM Capital Team,\n\nI would like to make an enquiry.\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\n\nMessage:\n${message}\n\nThank you.`);
+
+            // Redirect to Email first (opens default mail client)
+            const mailtoUrl = `mailto:${emailAddress}?subject=${emailSubject}&body=${emailBody}`;
+            window.location.href = mailtoUrl;
+
+            // Wait a short moment then open WhatsApp in a new tab
+            setTimeout(() => {
+                const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+                window.open(waUrl, '_blank');
+            }, 500);
         });
     }
 });
